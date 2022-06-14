@@ -1,0 +1,169 @@
+:root {
+    /* primary colors */
+    --violet: hsl(263, 55%, 52%);
+    --dark-gray-blue: hsl(217, 19%, 35%);
+    --black-blue: hsl(219, 29%, 14%);
+    
+    /* neutral colors */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-gray-blue: hsl(210, 46%, 95%);
+
+    /* root font size adjustment */
+    font-size: 10px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+    'daniel daniel jonathan kira'
+    'jeanette patrick patrick kira';
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 10rem 15rem;
+    gap: 2rem;
+
+    background-color: var(--light-gray-blue);
+}
+
+.white {
+    background-color: white;
+    color: var(--dark-gray-blue);
+}
+
+.violet {
+    background-color: var(--violet);
+}
+
+.dark-gray-blue {
+    background-color: var(--dark-gray-blue);
+}
+
+.black-blue {
+    background-color: var(--black-blue);
+}
+
+.dark {
+    color: white;
+}
+
+.item1 {
+    grid-area: daniel;
+
+    position: relative;
+}
+.item2 {
+    grid-area: jonathan;
+}
+.item3 {
+    grid-area: jeanette;
+}
+.item4 {
+    grid-area: patrick;
+}
+.item5 {
+    grid-area: kira;
+}
+
+.text-box {
+    padding: 2em;
+    border-radius: 1rem;
+    gap: 2em;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.icon {
+    z-index: 10;
+    position: absolute; 
+    top: 0.3em;
+    right: 3.5em;
+}
+
+.profile {
+    column-gap: 0.7em;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 1.5px;
+
+    height: auto;
+    width: 2.1rem;
+}
+
+.white .profile-img {
+    border-color: var(--violet);
+}
+
+.name {
+    gap: 0.1em;
+
+    font-size: 0.9rem;
+}
+
+.name h3, .name h4 {
+    margin: 0;
+}
+
+.name h4 {
+    opacity: 0.5;
+}
+
+.main-testimony {
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 1.5em;
+    z-index: 20;
+}
+
+.review {
+    opacity: 0.7;
+
+    font-size: 1.25rem;
+    line-height: 1.5em;
+}
+
+@media (max-width: 375px) {
+    main {
+        grid-template-areas: 
+        "daniel"
+        "jonathan"
+        "jeanette"
+        "patrick"
+        "kira";
+
+        padding: 7rem 4rem;
+        
+        grid-template-columns: auto;
+    }
+
+    .name {
+        z-index: 20;
+    }
+
+    .main-testimony {
+        font-size: 1.5em;
+    }
+
+    .review {
+        font-size: 1rem;
+    }
+}
+
+
+
